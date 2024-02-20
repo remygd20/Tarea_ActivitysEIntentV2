@@ -16,15 +16,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/txtv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingresa tu nombre:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+
+        <EditText
             android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hola Jorge =)!" />
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Name" />
 
         <Button
             android:id="@+id/btn_comenzar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Comenzar" />
     </LinearLayout>
 
