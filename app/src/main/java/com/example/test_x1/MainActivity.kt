@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra("name", name)
             }
             startActivity(intent)
+            //funcionando
         }
 
     }
