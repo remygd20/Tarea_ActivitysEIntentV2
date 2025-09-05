@@ -4,40 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E7FF"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <!-- Tarjeta para que se vea bien -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/txtv_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingresa tu nombre:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <!-- El texto que dice ingresa tu nombre -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu nombre:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
 
-        <EditText
-            android:id="@+id/txt_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Name" />
+            <!-- Espacio para escribir el nombre -->
+            <EditText
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:padding="10dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="8dp"/>
 
-        <Button
-            android:id="@+id/btn_comenzar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Comenzar" />
-    </LinearLayout>
+            <!-- El texto que dice ingresa tu apellido -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu apellido:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"/>
 
+            <!-- Espacio para escribir el apellido -->
+            <EditText
+                android:id="@+id/txt_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido"
+                android:padding="10dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Botón para ir a la siguiente ventana o actividad -->
+            <Button
+                android:id="@+id/btn_comenzar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Siguiente"
+                android:textAllCaps="false"
+                android:backgroundTint="#2563EB"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
